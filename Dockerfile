@@ -1,4 +1,4 @@
-FROM chrismerchan/alpine-java
+FROM liatrio/alpine-java
 LABEL maintainer="achiliquinga@est.ups.edu.ec"
 COPY /target/spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar /home/spring-
 petclinic-2.3.0.jar
