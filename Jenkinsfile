@@ -1,6 +1,6 @@
 #!groovy
 pipeline {
-    agent none
+    agent none // Agent is defined per stage
     stages {
         stage('Maven Install') {
             agent {
@@ -13,7 +13,7 @@ pipeline {
             }
         }
         stage('Docker Build') {
-            agent any
+            agent any // This stage runs on the main Jenkins agent
             steps {
                 sh 'docker build -t grupo03/spring-petclinic:latest .'
             }
